@@ -31,7 +31,7 @@
         <div class="home-content-wrapper">
           <img
             class="logo"
-            src="assets/img/logo_final.png"
+            src="~/assets/img/logo_final.png"
             alt="Logo Deposito San Antonio E Hijos"
           />
           <h1>Depósito San Antonio E Hijos S.A.S</h1>
@@ -59,7 +59,7 @@
             construcción. Con ventas al retal y de línea con productos nuevos y
             de segunda mano.
           </p>
-          <img class="about_img" src="assets/img/tubos.png" alt="tubería" />
+          <img class="about_img" src="~/assets/img/tubos.png" alt="tubería" />
         </div>
         <div class="wave2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><path fill-opacity="1" class="wave-svg2" d="M0,160L120,170.7C240,181,480,203,720,213.3C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
@@ -128,7 +128,7 @@
                 <img
                   tabindex="0"
                   class="mat-img"
-                  src="assets/img/drillpipe.png"
+                  src="~/assets/img/drillpipe.png"
                   alt="Tubería Drill Pipe"
                 />
                 <span class="label-description"><strong>DRILL PIPE</strong></span>
@@ -137,7 +137,7 @@
                 ><img
                   tabindex="0"
                   class="mat-img"
-                  src="assets/img/linepipe_1.png"
+                  src="~/assets/img/linepipe_1.png"
                   alt="Tubería Line Pipe"
                 />
                 <span class="label-description"><strong>LINE PIPE</strong></span>
@@ -146,7 +146,7 @@
                 ><img
                   tabindex="0"
                   class="mat-img"
-                  src="assets/img/barra_perforadora.png"
+                  src="~/assets/img/barra_perforadora.png"
                   alt="Tubería Barras Perforadoras"
                 />
                 <span class="label-description"><strong>BARRAS</strong></span>
@@ -155,7 +155,7 @@
                 ><img
                   tabindex="0"
                   class="mat-img"
-                  src="assets/img/ejes_1.png"
+                  src="~/assets/img/ejes_1.png"
                   alt="Tubería Ejes"
                 />
                 <span class="label-description"><strong>EJES</strong></span>
@@ -182,7 +182,7 @@
                   <div class="medidas-container">
                     <img
                       class="mat_img"
-                      src="assets/img/drillpipe.png"
+                      src="~/assets/img/drillpipe.png"
                       alt="Tubería Drill Pipe"
                     />
                     <div class="medidas">
@@ -204,7 +204,7 @@
                   </p>
                   <img
                     class="mat_img"
-                    src="assets/img/linepipe_1.png"
+                    src="~/assets/img/linepipe_1.png"
                     alt="Tubería Line Pipe"
                   />
                 </div>
@@ -217,7 +217,7 @@
                   </p>
                   <img
                     class="mat_img"
-                    src="assets/img/barra_perforadora.png"
+                    src="~/assets/img/barra_perforadora.png"
                     alt="Tubería Barras Perforadoras"
                   />
                 </div>
@@ -228,7 +228,7 @@
                     usos generales, contiene acero bajo en carbono, esta puede
                     aportar una excelente conformabilidad y soldadibilidad.
                   </p>
-                  <img class="mat_img" src="assets/img/ejes_1.png" alt="Tubería Ejes" />
+                  <img class="mat_img" src="~/assets/img/ejes_1.png" alt="Tubería Ejes" />
                 </div>
               </div>
             </div>
@@ -260,63 +260,63 @@
                 <div class="subastas-hover">
                   <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
                 </div>
-                <img class="subastas_img" src="assets/img/codos.png" alt="tubería" />
+                <img class="subastas_img" src="~/assets/img/codos.png" alt="tubería" />
                 <h4 class="subastas_info">Codos y Flanches</h4>
               </div>
               <div class="subastas-content-wrapper">
                 <div class="subastas-hover">
                   <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
                 </div>
-                <img class="subastas_img" src="assets/img/centralizadores.png" alt="tubería" />
+                <img class="subastas_img" src="~/assets/img/centralizadores.png" alt="tubería" />
                 <h4 class="subastas_info">Centralizadores</h4>
               </div>
               <div class="subastas-content-wrapper">
                 <div class="subastas-hover">
                   <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
                 </div>
-                <img class="subastas_img" src="assets/img/esparragos.png" alt="tubería" />
+                <img class="subastas_img" src="~/assets/img/esparragos.png" alt="tubería" />
                 <h4 class="subastas_info">Espárragos</h4>
               </div>
               <div class="subastas-content-wrapper">
                 <div class="subastas-hover">
                   <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
                 </div>
-                <img class="subastas_img" src="assets/img/valvulas.png" alt="tubería" />
+                <img class="subastas_img" src="~/assets/img/valvulas.png" alt="tubería" />
                 <h4 class="subastas_info">Válvulas</h4>
               </div>
               <div class="subastas-content-wrapper">
                 <div class="subastas-hover">
                   <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
                 </div>
-                <img class="subastas_img" src="assets/img/polipasto.png" alt="tubería" />
+                <img class="subastas_img" src="~/assets/img/polipasto.png" alt="tubería" />
                 <h4 class="subastas_info">Polipasto</h4>
               </div>
               <div class="subastas-content-wrapper">
                 <div class="subastas-hover">
                   <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
                 </div>
-                <img class="subastas_img" src="assets/img/cabezal.png" alt="tubería" />
+                <img class="subastas_img" src="~/assets/img/cabezal.png" alt="tubería" />
                 <h4 class="subastas_info">Cabezal</h4>
               </div>
               <div class="subastas-content-wrapper">
                 <div class="subastas-hover">
                   <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
                 </div>
-                <img class="subastas_img" src="assets/img/tuercas.png" alt="tubería" />
+                <img class="subastas_img" src="~/assets/img/tuercas.png" alt="tubería" />
                 <h4 class="subastas_info">Tuercas</h4>
               </div>
               <div class="subastas-content-wrapper">
                 <div class="subastas-hover">
                   <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
                 </div>
-                <img class="subastas_img" src="assets/img/camisas.png" alt="tubería" />
+                <img class="subastas_img" src="~/assets/img/camisas.png" alt="tubería" />
                 <h4 class="subastas_info">Camisas Hidráulicas</h4>
               </div>
               <div class="subastas-content-wrapper">
                 <div class="subastas-hover">
                   <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
                 </div>
-                <img class="subastas_img" src="assets/img/bomba_centrifuga.png" alt="tubería" />
+                <img class="subastas_img" src="~/assets/img/bomba_centrifuga.png" alt="tubería" />
                 <h4 class="subastas_info">Bomba Centrífuga</h4>
               </div>
             </div>
@@ -337,7 +337,7 @@
               <div class="contact-content_info1">
                 <img
                   class="contact-logo"
-                  src="assets/img/logo_final.png"
+                  src="~/assets/img/logo_final.png"
                   alt="Logo Deposito San Antonio E Hijos"
                 />
                 <h4>Deposito San Antonio e hijos S.A.S</h4>
@@ -363,7 +363,7 @@
             <div class="contact-content-wrapper">
               <div class="contact-content_info3">
                 <h4>Escríbenos por whatsapp</h4>
-                <img src="assets/img/whatsapp.png" alt="whatsapp logo" />
+                <img src="~/assets/img/whatsapp.png" alt="whatsapp logo" />
                 <span>Tel. (57) 315 38 30 711</span>
               </div>
             </div>
@@ -381,7 +381,7 @@
       <div class="subastas-form-container">
         <form class="subastas-form">
           <div class="subastas-form-img">
-            <img src="assets/img/codos.png">
+            <img src="~/assets/img/codos.png">
             <span>Válvulas</span>
           </div>
           <label for="cantidad">Cantidad</label>
@@ -397,7 +397,7 @@
 
     <!--WHATSAPP ICON-->
     <aside class="whatsapp">
-      <a href="https://web.whatsapp.com/" target="_blank"><img src="assets/img/whatsapp.png" alt="Whatsapp logo" /></a>
+      <a href="https://web.whatsapp.com/" target="_blank"><img src="~/assets/img/whatsapp.png" alt="Whatsapp logo" /></a>
     </aside>
 
     <footer>
