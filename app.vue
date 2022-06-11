@@ -4,6 +4,10 @@ import { subastas } from "~/data/subastas";
 const subastaItemSelected = ref(null);
 const isSubastasModalActive = ref(false);
 
+const defaultSlide = ref(null);
+const defaultSlideMobile = ref(null);
+const selectedSlide = ref("drill-pipe");
+
 const handleSubastaItemSelected = (item) => {
   isSubastasModalActive.value = true;
   subastaItemSelected.value = item;
@@ -12,6 +16,15 @@ const handleSubastaItemSelected = (item) => {
 const handleSubastasModalClose = () => {
   isSubastasModalActive.value = false;
 };
+
+const handleSlideChange = (slide: string) => {
+  selectedSlide.value = slide;
+};
+
+onMounted(() => {
+  defaultSlide.value.click();
+  defaultSlideMobile.value.click();
+});
 </script>
 
 <template>
@@ -102,10 +115,31 @@ const handleSubastasModalClose = () => {
           </div>
           <div class="materiales-info-desktop">
             <div class="slider-desktop">
-              <input type="radio" name="slide" id="slide-1" checked />
-              <input type="radio" name="slide" id="slide-2" />
-              <input type="radio" name="slide" id="slide-3" />
-              <input type="radio" name="slide" id="slide-4" />
+              <input
+                type="radio"
+                name="slide"
+                id="slide-1"
+                ref="defaultSlide"
+                @change="() => handleSlideChange('drill-pipe')"
+              />
+              <input
+                type="radio"
+                name="slide"
+                id="slide-2"
+                @change="() => handleSlideChange('line-pipe')"
+              />
+              <input
+                type="radio"
+                name="slide"
+                id="slide-3"
+                @change="() => handleSlideChange('barras')"
+              />
+              <input
+                type="radio"
+                name="slide"
+                id="slide-4"
+                @change="() => handleSlideChange('ejes')"
+              />
               <div class="slider-content-desktop slide-1">
                 <h3>Drill Pipe</h3>
                 <p>
@@ -154,6 +188,7 @@ const handleSubastasModalClose = () => {
                 <img
                   tabindex="0"
                   class="mat-img"
+                  :class="{ selected: selectedSlide === 'drill-pipe' }"
                   src="~/assets/img/drillpipe.png"
                   alt="Tubería Drill Pipe"
                 />
@@ -165,6 +200,7 @@ const handleSubastasModalClose = () => {
                 ><img
                   tabindex="0"
                   class="mat-img"
+                  :class="{ selected: selectedSlide === 'line-pipe' }"
                   src="~/assets/img/linepipe_1.png"
                   alt="Tubería Line Pipe"
                 />
@@ -176,6 +212,7 @@ const handleSubastasModalClose = () => {
                 ><img
                   tabindex="0"
                   class="mat-img"
+                  :class="{ selected: selectedSlide === 'barras' }"
                   src="~/assets/img/barra_perforadora.png"
                   alt="Tubería Barras Perforadoras"
                 />
@@ -185,6 +222,7 @@ const handleSubastasModalClose = () => {
                 ><img
                   tabindex="0"
                   class="mat-img"
+                  :class="{ selected: selectedSlide === 'ejes' }"
                   src="~/assets/img/ejes_1.png"
                   alt="Tubería Ejes"
                 />
@@ -198,10 +236,31 @@ const handleSubastasModalClose = () => {
           <div class="materiales-container">
             <h2 class="materiales_title header-moves">MATERIALES</h2>
             <div class="slider">
-              <input type="radio" name="slide" id="slide1" checked />
-              <input type="radio" name="slide" id="slide2" />
-              <input type="radio" name="slide" id="slide3" />
-              <input type="radio" name="slide" id="slide4" />
+              <input
+                type="radio"
+                name="slide-mobile"
+                id="slide1"
+                ref="defaultSlideMobile"
+                @change="() => handleSlideChange('drill-pipe')"
+              />
+              <input
+                type="radio"
+                name="slide-mobile"
+                id="slide2"
+                @change="() => handleSlideChange('line-pipe')"
+              />
+              <input
+                type="radio"
+                name="slide-mobile"
+                id="slide3"
+                @change="() => handleSlideChange('barras')"
+              />
+              <input
+                type="radio"
+                name="slide-mobile"
+                id="slide4"
+                @change="() => handleSlideChange('ejes')"
+              />
               <div class="slider-content slide1">
                 <h3>Drill Pipe</h3>
                 <p>
@@ -267,10 +326,26 @@ const handleSubastasModalClose = () => {
             </div>
           </div>
           <div class="dots" tabindex="0">
-            <label for="slide1" tabindex="0"></label>
-            <label for="slide2" tabindex="0"></label>
-            <label for="slide3" tabindex="0"></label>
-            <label for="slide4" tabindex="0"></label>
+            <label
+              for="slide1"
+              tabindex="0"
+              :class="{ selected: selectedSlide === 'drill-pipe' }"
+            ></label>
+            <label
+              for="slide2"
+              tabindex="0"
+              :class="{ selected: selectedSlide === 'line-pipe' }"
+            ></label>
+            <label
+              for="slide3"
+              tabindex="0"
+              :class="{ selected: selectedSlide === 'barras' }"
+            ></label>
+            <label
+              for="slide4"
+              tabindex="0"
+              :class="{ selected: selectedSlide === 'ejes' }"
+            ></label>
           </div>
         </div>
         <div class="wave2">

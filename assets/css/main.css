@@ -416,7 +416,8 @@ label a {
 
 .dots label:hover,
 .dots label:focus,
-.dots label:active {
+.dots label:active,
+.dots label.selected {
   background-color: white;
 }
 
@@ -1484,6 +1485,7 @@ label a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
   .label-description {
     margin-top: 10px;
@@ -1512,7 +1514,8 @@ label a {
   }
   .mat-img:hover,
   .mat-img:active,
-  .mat-img:focus {
+  .mat-img:focus,
+  .mat-img.selected {
     height: 250px;
     transition: height 0.2s ease-in;
   }
