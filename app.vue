@@ -7,6 +7,7 @@ const isSubastasModalActive = ref(false);
 const defaultSlide = ref(null);
 const defaultSlideMobile = ref(null);
 const selectedSlide = ref("drill-pipe");
+const visitedSections = ref([]);
 
 const handleSubastaItemSelected = (item) => {
   isSubastasModalActive.value = true;
@@ -19,6 +20,12 @@ const handleSubastasModalClose = () => {
 
 const handleSlideChange = (slide: string) => {
   selectedSlide.value = slide;
+};
+
+const handleHoverSection = (section: string) => {
+  if (!visitedSections.value.includes(section)) {
+    visitedSections.value.push(section);
+  }
 };
 
 onMounted(() => {
@@ -79,7 +86,12 @@ onMounted(() => {
           </svg>
         </div>
       </section>
-      <section class="about" id="about">
+      <section
+        id="about"
+        class="about"
+        :class="{ visited: visitedSections.includes('about') }"
+        @mouseenter="() => handleHoverSection('about')"
+      >
         <div class="about-content-wrapper">
           <h2 class="header-moves">Nosotros</h2>
           <p>
@@ -107,7 +119,12 @@ onMounted(() => {
       </section>
 
       <!--MATERIALES SECTION-->
-      <section class="materiales" id="materiales">
+      <section
+        id="materiales"
+        class="materiales"
+        :class="{ visited: visitedSections.includes('materiales') }"
+        @mouseenter="() => handleHoverSection('materiales')"
+      >
         <!--DESKTOP-->
         <div class="materiales-container-desktop">
           <div class="materiales_title-desktop">
@@ -360,7 +377,12 @@ onMounted(() => {
       </section>
 
       <!--SUBASTAS SECTION-->
-      <section class="subastas" id="subastas">
+      <section
+        id="subastas"
+        class="subastas"
+        :class="{ visited: visitedSections.includes('subastas') }"
+        @mouseenter="() => handleHoverSection('subastas')"
+      >
         <div class="subastas-content">
           <div class="subastas_title header-moves">
             <div>
@@ -409,7 +431,12 @@ onMounted(() => {
       </section>
 
       <!--CONTACT SECTION-->
-      <section class="contact" id="contact">
+      <section
+        id="contact"
+        class="contact"
+        :class="{ visited: visitedSections.includes('contact') }"
+        @mouseenter="() => handleHoverSection('contact')"
+      >
         <div class="contact-content">
           <div class="contact_title header-moves"><h2>CONTACTO</h2></div>
           <div class="contact-content-container">

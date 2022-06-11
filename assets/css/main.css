@@ -862,9 +862,9 @@ label a {
 }
 
 .header-moves {
-  transform: translateX(-200px);
+  transform: translateX(0);
+  opacity: 1;
   transition: transform 2s ease-in-out, opacity 2s ease-in-out;
-  opacity: 0;
 }
 
 .about-content-wrapper:hover .header-moves,
@@ -877,10 +877,25 @@ label a {
   transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
+.about.visited .header-moves,
+.materiales.visited .header-moves,
+.subastas.visited .header-moves,
+.contact.visited .header-moves {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
 /* Media Queries -------------------------------- */
 
 @media screen and (min-width: 480px) {
   /* start of medium tablet styles */
+
+  .header-moves {
+    transform: translateX(-200px);
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    opacity: 0;
+  }
 
   .main-line {
     position: fixed;
