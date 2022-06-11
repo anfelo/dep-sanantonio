@@ -463,7 +463,7 @@ onMounted(() => {
                   <input type="email" id="email" name="user_email" />
                   <label for="asunto">Asunto</label>
                   <textarea id="asunto" name="user_asunto"></textarea>
-                  <button type="submit">Enviar</button>
+                  <button type="button">Enviar</button>
                 </form>
               </div>
             </div>

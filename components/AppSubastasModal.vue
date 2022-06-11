@@ -22,7 +22,7 @@ defineEmits(["close"]);
           <input id="precio" name="user_precio" />
           <label for="email">Correo</label>
           <input type="email" id="email" name="user_email" />
-          <button type="submit">Enviar</button>
+          <button type="button">Enviar</button>
         </form>
       </div>
     </div>
