@@ -532,7 +532,7 @@ label a {
 .subastas-content-wrapper:hover .subastas-hover {
   bottom: 0;
   opacity: 1;
-  transition: bottom .5s ease-in-out, opacity .3s ease-in;
+  transition: bottom 0.5s ease-in-out, opacity 0.3s ease-in;
 }
 
 .subastas-hover {
@@ -546,7 +546,7 @@ label a {
   left: 0;
   right: 0;
   background-color: rgba(23, 24, 33, 0.8);
-  transition: bottom .5s ease-in-out, opacity .3s ease-in;
+  transition: bottom 0.5s ease-in-out, opacity 0.3s ease-in;
 }
 
 .subastas-button {
@@ -568,11 +568,10 @@ label a {
 }
 
 .subastas-button:hover a {
-  color:white;
+  color: white;
 }
 
 .subastas-modal {
-  visibility: hidden;
   position: fixed;
   display: flex;
   align-items: center;
@@ -583,10 +582,6 @@ label a {
   right: 0;
   background-color: rgba(89, 89, 89, 0.6);
   z-index: 999;
-}
-
-.subastas-modal.is-active {
-  visibility: visible;
 }
 
 .modal-close {
@@ -600,7 +595,7 @@ label a {
   border-radius: 50%;
 }
 
-.modal-close::before{
+.modal-close::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -728,7 +723,7 @@ label a {
 .contact-content_info1 {
   background-image: url(/assets/img/img_worker.JPG);
   background-color: rgba(54, 54, 54, 0.9);
-  background-blend-mode:overlay;
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -871,7 +866,7 @@ label a {
   opacity: 0;
 }
 
-.about-content-wrapper:hover  .header-moves,
+.about-content-wrapper:hover .header-moves,
 .materiales-container-desktop:hover .header-moves,
 .materiales-container:hover .header-moves,
 .subastas-content:hover .header-moves,
@@ -880,8 +875,6 @@ label a {
   opacity: 1;
   transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
-
-
 
 /* Media Queries -------------------------------- */
 
@@ -1287,9 +1280,9 @@ label a {
     left: 0;
     right: 0;
     display: block;
-    transform: scale(0,1);
+    transform: scale(0, 1);
     transform-origin: left;
-    transition: transform .3s ease-in;
+    transition: transform 0.3s ease-in;
     height: 5px;
     background-color: rgb(35, 148, 0);
   }
@@ -1300,22 +1293,21 @@ label a {
     left: 0;
     right: 0;
     display: block;
-    transform: scale(0,1);
+    transform: scale(0, 1);
     transform-origin: right;
-    transition: transform .3s ease-in;
+    transition: transform 0.3s ease-in;
     height: 5px;
     background-color: rgb(35, 148, 0);
   }
   .main-header a:hover::before,
   .main-header a:hover::after {
-    transform: scale(1,1);
-    transition: transform .3s ease-in;
+    transform: scale(1, 1);
+    transition: transform 0.3s ease-in;
   }
   .toggle-label {
     display: none;
   }
- 
-  
+
   .whatsapp {
     display: flex;
     position: fixed;
@@ -1497,7 +1489,7 @@ label a {
     margin-top: 10px;
     color: white;
     opacity: 0;
-    transition: opacity .2s ease-in;
+    transition: opacity 0.2s ease-in;
     font-family: myriad;
   }
   .label-description::after {
@@ -1509,7 +1501,7 @@ label a {
   .img-label:focus > span,
   .img-label:active > span {
     opacity: 1;
-    transition: opacity .2s ease-in;
+    transition: opacity 0.2s ease-in;
   }
   .mat-img {
     width: 100px;
@@ -1812,7 +1804,7 @@ label a {
   .contact-logo {
     width: 200px;
   }
-  
+
   .subastas-form {
     width: 300px;
     height: 380px;
@@ -1836,13 +1828,13 @@ label a {
   }
   .subastas-form span {
     margin-top: 0;
-    font-size: .8em;
+    font-size: 0.8em;
     color: black;
   }
   .subastas-form label {
     font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
     color: black;
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 600;
   }
   .subastas-form input {
