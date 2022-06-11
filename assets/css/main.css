@@ -571,7 +571,7 @@ label a {
   color:white;
 }
 
-.subastas-modal-active {
+.subastas-modal {
   visibility: hidden;
   position: fixed;
   display: flex;
@@ -583,6 +583,10 @@ label a {
   right: 0;
   background-color: rgba(89, 89, 89, 0.6);
   z-index: 999;
+}
+
+.subastas-modal.is-active {
+  visibility: visible;
 }
 
 .modal-close {

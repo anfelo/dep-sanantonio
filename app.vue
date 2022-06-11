@@ -1,6 +1,22 @@
+<script setup lang="ts">
+import { subastas } from "~/data/subastas";
+
+const subastaItemSelected = ref(null);
+const isSubastasModalActive = ref(false);
+
+const handleSubastaItemSelected = (item) => {
+  isSubastasModalActive.value = true;
+  subastaItemSelected.value = item;
+};
+
+const handleSubastasModalClose = () => {
+  isSubastasModalActive.value = false;
+};
+</script>
+
 <template>
   <div>
-     <main>
+    <main>
       <!--MAIN HEADER-->
       <div class="main-header-wrapper">
         <input type="checkbox" id="header-toggle" class="header-toggle" />
@@ -41,7 +57,12 @@
           </p>
         </div>
         <div class="wave">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><path fill-opacity="1" class="wave-svg" d="M0,160L120,170.7C240,181,480,203,720,213.3C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+            <path
+              fill-opacity="1"
+              class="wave-svg"
+              d="M0,160L120,170.7C240,181,480,203,720,213.3C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            ></path>
           </svg>
         </div>
       </section>
@@ -62,7 +83,12 @@
           <img class="about_img" src="~/assets/img/tubos.png" alt="tubería" />
         </div>
         <div class="wave2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><path fill-opacity="1" class="wave-svg2" d="M0,160L120,170.7C240,181,480,203,720,213.3C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+            <path
+              fill-opacity="1"
+              class="wave-svg2"
+              d="M0,160L120,170.7C240,181,480,203,720,213.3C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            ></path>
           </svg>
         </div>
       </section>
@@ -131,7 +157,9 @@
                   src="~/assets/img/drillpipe.png"
                   alt="Tubería Drill Pipe"
                 />
-                <span class="label-description"><strong>DRILL PIPE</strong></span>
+                <span class="label-description"
+                  ><strong>DRILL PIPE</strong></span
+                >
               </label>
               <label class="img-label" for="slide-2"
                 ><img
@@ -140,7 +168,9 @@
                   src="~/assets/img/linepipe_1.png"
                   alt="Tubería Line Pipe"
                 />
-                <span class="label-description"><strong>LINE PIPE</strong></span>
+                <span class="label-description"
+                  ><strong>LINE PIPE</strong></span
+                >
               </label>
               <label class="img-label" for="slide-3"
                 ><img
@@ -163,84 +193,93 @@
             </div>
           </div>
         </div>
-          <!--MOBILE-->
-          <div class="materiales-divider">
-            <div class="materiales-container">
-              <h2 class="materiales_title header-moves">MATERIALES</h2>
-              <div class="slider">
-                <input type="radio" name="slide" id="slide1" checked />
-                <input type="radio" name="slide" id="slide2" />
-                <input type="radio" name="slide" id="slide3" />
-                <input type="radio" name="slide" id="slide4" />
-                <div class="slider-content slide1">
-                  <h3>Drill Pipe</h3>
-                  <p>
-                    La tubería de perforación <strong>Drill Pipe</strong> se compone
-                    de un tubo sin costuras, grande y pesado que gira sobre el eje
-                    del taladro y permite el flujo del líquido.
-                  </p>
-                  <div class="medidas-container">
-                    <img
-                      class="mat_img"
-                      src="~/assets/img/drillpipe.png"
-                      alt="Tubería Drill Pipe"
-                    />
-                    <div class="medidas">
-                      <p><strong>Con medidas desde:</strong></p>
-                      <ul>
-                        <li>3 1/2"</li>
-                        <li>5"</li>
-                        <li>6 5/8"</li>
-                      </ul>
-                    </div>
+        <!--MOBILE-->
+        <div class="materiales-divider">
+          <div class="materiales-container">
+            <h2 class="materiales_title header-moves">MATERIALES</h2>
+            <div class="slider">
+              <input type="radio" name="slide" id="slide1" checked />
+              <input type="radio" name="slide" id="slide2" />
+              <input type="radio" name="slide" id="slide3" />
+              <input type="radio" name="slide" id="slide4" />
+              <div class="slider-content slide1">
+                <h3>Drill Pipe</h3>
+                <p>
+                  La tubería de perforación <strong>Drill Pipe</strong> se
+                  compone de un tubo sin costuras, grande y pesado que gira
+                  sobre el eje del taladro y permite el flujo del líquido.
+                </p>
+                <div class="medidas-container">
+                  <img
+                    class="mat_img"
+                    src="~/assets/img/drillpipe.png"
+                    alt="Tubería Drill Pipe"
+                  />
+                  <div class="medidas">
+                    <p><strong>Con medidas desde:</strong></p>
+                    <ul>
+                      <li>3 1/2"</li>
+                      <li>5"</li>
+                      <li>6 5/8"</li>
+                    </ul>
                   </div>
                 </div>
-                <div class="slider-content slide2">
-                  <h3>LINE PIPE</h3>
-                  <p>
-                    La <strong>tubería de línea</strong> permite transportar
-                    diferentes tipos de fluidos como agua, aceite, combustible,
-                    petróleo, entre otros.
-                  </p>
-                  <img
-                    class="mat_img"
-                    src="~/assets/img/linepipe_1.png"
-                    alt="Tubería Line Pipe"
-                  />
-                </div>
-                <div class="slider-content slide3">
-                  <h3>BARRAS PERFORADAS</h3>
-                  <p>
-                    <strong>Barra perforadora</strong> es un acero de alta
-                    resistencia que gracias a su capacidad de ser soldada, se
-                    utiiliza en mecanizados.
-                  </p>
-                  <img
-                    class="mat_img"
-                    src="~/assets/img/barra_perforadora.png"
-                    alt="Tubería Barras Perforadoras"
-                  />
-                </div>
-                <div class="slider-content slide4">
-                  <h3>EJES</h3>
-                  <p>
-                    La <strong>barra de acero al carbono</strong> es perfecta para
-                    usos generales, contiene acero bajo en carbono, esta puede
-                    aportar una excelente conformabilidad y soldadibilidad.
-                  </p>
-                  <img class="mat_img" src="~/assets/img/ejes_1.png" alt="Tubería Ejes" />
-                </div>
+              </div>
+              <div class="slider-content slide2">
+                <h3>LINE PIPE</h3>
+                <p>
+                  La <strong>tubería de línea</strong> permite transportar
+                  diferentes tipos de fluidos como agua, aceite, combustible,
+                  petróleo, entre otros.
+                </p>
+                <img
+                  class="mat_img"
+                  src="~/assets/img/linepipe_1.png"
+                  alt="Tubería Line Pipe"
+                />
+              </div>
+              <div class="slider-content slide3">
+                <h3>BARRAS PERFORADAS</h3>
+                <p>
+                  <strong>Barra perforadora</strong> es un acero de alta
+                  resistencia que gracias a su capacidad de ser soldada, se
+                  utiiliza en mecanizados.
+                </p>
+                <img
+                  class="mat_img"
+                  src="~/assets/img/barra_perforadora.png"
+                  alt="Tubería Barras Perforadoras"
+                />
+              </div>
+              <div class="slider-content slide4">
+                <h3>EJES</h3>
+                <p>
+                  La <strong>barra de acero al carbono</strong> es perfecta para
+                  usos generales, contiene acero bajo en carbono, esta puede
+                  aportar una excelente conformabilidad y soldadibilidad.
+                </p>
+                <img
+                  class="mat_img"
+                  src="~/assets/img/ejes_1.png"
+                  alt="Tubería Ejes"
+                />
               </div>
             </div>
-            <div class="dots" tabindex="0">
-              <label for="slide1" tabindex="0"></label>
-              <label for="slide2" tabindex="0"></label>
-              <label for="slide3" tabindex="0"></label>
-              <label for="slide4" tabindex="0"></label>
-            </div>
           </div>
+          <div class="dots" tabindex="0">
+            <label for="slide1" tabindex="0"></label>
+            <label for="slide2" tabindex="0"></label>
+            <label for="slide3" tabindex="0"></label>
+            <label for="slide4" tabindex="0"></label>
+          </div>
+        </div>
         <div class="wave2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><path fill-opacity="1" class="wave-svg" d="M0,160L120,170.7C240,181,480,203,720,213.3C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+            <path
+              fill-opacity="1"
+              class="wave-svg"
+              d="M0,160L120,170.7C240,181,480,203,720,213.3C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            ></path>
           </svg>
         </div>
       </section>
@@ -250,80 +289,46 @@
         <div class="subastas-content">
           <div class="subastas_title header-moves">
             <div>
-            <h2>SUBASTAS</h2>
-            <p>En esta sección puedes crear subastas para todos los productos que encuentras a continuación.</p>
-          </div>
+              <h2>SUBASTAS</h2>
+              <p>
+                En esta sección puedes crear subastas para todos los productos
+                que encuentras a continuación.
+              </p>
+            </div>
           </div>
           <div class="subastas-content-box">
             <div class="subastas-content-container">
-              <div class="subastas-content-wrapper">
+              <div
+                v-for="item in subastas"
+                :key="item.name"
+                class="subastas-content-wrapper"
+              >
                 <div class="subastas-hover">
-                  <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
+                  <button
+                    name="subastas-button"
+                    class="subastas-button"
+                    @click="() => handleSubastaItemSelected(item)"
+                  >
+                    <a>Realizar Oferta</a>
+                  </button>
                 </div>
-                <img class="subastas_img" src="~/assets/img/codos.png" alt="tubería" />
-                <h4 class="subastas_info">Codos y Flanches</h4>
-              </div>
-              <div class="subastas-content-wrapper">
-                <div class="subastas-hover">
-                  <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
-                </div>
-                <img class="subastas_img" src="~/assets/img/centralizadores.png" alt="tubería" />
-                <h4 class="subastas_info">Centralizadores</h4>
-              </div>
-              <div class="subastas-content-wrapper">
-                <div class="subastas-hover">
-                  <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
-                </div>
-                <img class="subastas_img" src="~/assets/img/esparragos.png" alt="tubería" />
-                <h4 class="subastas_info">Espárragos</h4>
-              </div>
-              <div class="subastas-content-wrapper">
-                <div class="subastas-hover">
-                  <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
-                </div>
-                <img class="subastas_img" src="~/assets/img/valvulas.png" alt="tubería" />
-                <h4 class="subastas_info">Válvulas</h4>
-              </div>
-              <div class="subastas-content-wrapper">
-                <div class="subastas-hover">
-                  <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
-                </div>
-                <img class="subastas_img" src="~/assets/img/polipasto.png" alt="tubería" />
-                <h4 class="subastas_info">Polipasto</h4>
-              </div>
-              <div class="subastas-content-wrapper">
-                <div class="subastas-hover">
-                  <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
-                </div>
-                <img class="subastas_img" src="~/assets/img/cabezal.png" alt="tubería" />
-                <h4 class="subastas_info">Cabezal</h4>
-              </div>
-              <div class="subastas-content-wrapper">
-                <div class="subastas-hover">
-                  <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
-                </div>
-                <img class="subastas_img" src="~/assets/img/tuercas.png" alt="tubería" />
-                <h4 class="subastas_info">Tuercas</h4>
-              </div>
-              <div class="subastas-content-wrapper">
-                <div class="subastas-hover">
-                  <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
-                </div>
-                <img class="subastas_img" src="~/assets/img/camisas.png" alt="tubería" />
-                <h4 class="subastas_info">Camisas Hidráulicas</h4>
-              </div>
-              <div class="subastas-content-wrapper">
-                <div class="subastas-hover">
-                  <button name="subastas-button" class="subastas-button"><a>Realizar Oferta</a></button>
-                </div>
-                <img class="subastas_img" src="~/assets/img/bomba_centrifuga.png" alt="tubería" />
-                <h4 class="subastas_info">Bomba Centrífuga</h4>
+                <img
+                  class="subastas_img"
+                  :src="`/img/${item.img}`"
+                  :alt="item.imgAlt"
+                />
+                <h4 class="subastas_info">{{ item.name }}</h4>
               </div>
             </div>
           </div>
         </div>
         <div class="wave">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><path fill-opacity="1" class="wave-svg2" d="M0,160L120,170.7C240,181,480,203,720,213.3C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+            <path
+              fill-opacity="1"
+              class="wave-svg2"
+              d="M0,160L120,170.7C240,181,480,203,720,213.3C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            ></path>
           </svg>
         </div>
       </section>
@@ -370,37 +375,22 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <!--MODAL SUBASTAS-->
-    <input type="checkbox" id="modal" class="modal-toggle">
-    <input type="checkbox" id="modal" class="modal-toggle-close">
-    <div class="subastas-modal-active">
-      <span class="modal-close"></span>
-      <div class="subastas-form-container">
-        <form class="subastas-form">
-          <div class="subastas-form-img">
-            <img src="~/assets/img/codos.png">
-            <span>Válvulas</span>
-          </div>
-          <label for="cantidad">Cantidad</label>
-          <input type="text" id="cantidad" name="user_cantidad" />
-          <label for="precio">Precio</label>
-          <input id="precio" name="user_precio">
-          <label for="email">Correo</label>
-          <input type="email" id="email" name="user_email" />
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-    </div>
+    <AppSubastasModal
+      :isActive="isSubastasModalActive"
+      :item="subastaItemSelected"
+      @close="() => handleSubastasModalClose()"
+    />
 
     <!--WHATSAPP ICON-->
     <aside class="whatsapp">
-      <a href="https://web.whatsapp.com/" target="_blank"><img src="~/assets/img/whatsapp.png" alt="Whatsapp logo" /></a>
+      <a href="https://web.whatsapp.com/" target="_blank"
+        ><img src="~/assets/img/whatsapp.png" alt="Whatsapp logo"
+      /></a>
     </aside>
 
-    <footer>
-    </footer>
+    <footer></footer>
   </div>
 </template>
