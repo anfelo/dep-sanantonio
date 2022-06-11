@@ -28,6 +28,11 @@ const handleHoverSection = (section: string) => {
   }
 };
 
+const handleSendEmail = async () => {
+  const res = await $fetch("/api/hello");
+  console.log(res);
+};
+
 onMounted(() => {
   defaultSlide.value.click();
   defaultSlideMobile.value.click();
@@ -463,7 +468,7 @@ onMounted(() => {
                   <input type="email" id="email" name="user_email" />
                   <label for="asunto">Asunto</label>
                   <textarea id="asunto" name="user_asunto"></textarea>
-                  <button type="button">Enviar</button>
+                  <button type="button" @click="handleSendEmail">Enviar</button>
                 </form>
               </div>
             </div>
