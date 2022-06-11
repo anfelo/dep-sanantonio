@@ -1,12 +1,12 @@
 /* Fonts -------------------------------------------------------------------- */
 @font-face {
   font-family: Exotc350;
-  src: url(/assets/fonts/Exotc350\ Bd\ BT\ Bold.ttf);
+  src: url(/assets/fonts/Exotc350_Bd_BT_Bold.ttf);
 }
 
 @font-face {
   font-family: gothic;
-  src: url(/assets/fonts/GOTHIC.TTF);
+  src: url(/assets/fonts/GOTHIC.ttf);
 }
 
 @font-face {
