@@ -9,6 +9,12 @@ const defaultSlideMobile = ref(null);
 const selectedSlide = ref("drill-pipe");
 const visitedSections = ref([]);
 
+const contactForm = {
+  email: "",
+  name: "",
+  message: "",
+};
+
 const handleSubastaItemSelected = (item) => {
   isSubastasModalActive.value = true;
   subastaItemSelected.value = item;
@@ -29,8 +35,14 @@ const handleHoverSection = (section: string) => {
 };
 
 const handleSendEmail = async () => {
-  const res = await $fetch("/api/hello");
-  console.log(res);
+  await $fetch("/api/contact", {
+    method: "post",
+    body: { ...contactForm },
+  });
+};
+
+const handleContactFormChange = (prop: string, value: string) => {
+  contactForm[prop] = value;
 };
 
 onMounted(() => {
@@ -463,11 +475,31 @@ onMounted(() => {
               <div class="contact-content_info2">
                 <form class="contact_form">
                   <label for="empresa">Empresa</label>
-                  <input type="text" id="empresa" name="user_empresa" />
+                  <input
+                    type="text"
+                    id="empresa"
+                    name="user_empresa"
+                    @input="
+                      (e: any) => handleContactFormChange('name', e.target.value)
+                    "
+                  />
                   <label for="email">Correo</label>
-                  <input type="email" id="email" name="user_email" />
+                  <input
+                    type="email"
+                    id="email"
+                    name="user_email"
+                    @input="
+                      (e: any) => handleContactFormChange('email', e.target.value)
+                    "
+                  />
                   <label for="asunto">Asunto</label>
-                  <textarea id="asunto" name="user_asunto"></textarea>
+                  <textarea
+                    id="asunto"
+                    name="user_asunto"
+                    @input="
+                      (e: any) => handleContactFormChange('message', e.target.value)
+                    "
+                  ></textarea>
                   <button type="button" @click="handleSendEmail">Enviar</button>
                 </form>
               </div>
