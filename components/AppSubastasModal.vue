@@ -16,9 +16,9 @@ defineEmits(["close"]);
             <img :alt="item.imgAlt" :src="`/img/${item.img}`" />
             <span>{{ item.name }}</span>
           </div>
-          <label for="cantidad">Cantidad</label>
-          <input type="text" id="cantidad" name="user_cantidad" />
-          <label for="precio">Precio</label>
+          <label for="nombre">Nombre o Empresa</label>
+          <input type="text" id="nombre" name="user_nombre" />
+          <label for="precio">Oferte</label>
           <input id="precio" name="user_precio" />
           <label for="email">Correo</label>
           <input type="email" id="email" name="user_email" />

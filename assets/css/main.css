@@ -917,7 +917,7 @@ label a {
   }
 
   .home {
-    background-size: 95%;
+    background-size: 80%;
   }
   .wave {
     bottom: -30px;
@@ -944,7 +944,7 @@ label a {
     font-size: 2.3em;
   }
   .home-content-wrapper p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     line-height: 1.2em;
   }
 
@@ -1121,7 +1121,7 @@ label a {
   }
 
   .home {
-    background-size: 85%;
+    background-size: 65%;
   }
   .home-content-wrapper {
     width: 450px;
@@ -1133,7 +1133,7 @@ label a {
     font-size: 2.5em;
   }
   .home-content-wrapper p {
-    font-size: 1.4em;
+    font-size: 1.2em;
     line-height: 1.3em;
   }
 
@@ -1150,6 +1150,10 @@ label a {
   .slider-content p {
     font-size: 1.3em;
     line-height: 1.4em;
+  }
+
+  .about-content-wrapper {
+    padding-bottom: 10px;
   }
 
   .materiales-container {
@@ -1336,7 +1340,7 @@ label a {
   }
 
   .home {
-    background-size: 70%;
+    background-size: 55%;
     border-bottom: none;
     height: 105vh;
   }
@@ -1369,7 +1373,7 @@ label a {
     font-size: 2.6em;
   }
   .home-content-wrapper p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     line-height: 1.4em;
   }
 
@@ -1386,6 +1390,7 @@ label a {
     margin-top: 80px;
     width: 1000px;
     box-shadow: 0 0 0 0;
+    padding-bottom: 20px;
   }
   .about_img {
     border-radius: 50%;
@@ -1457,6 +1462,7 @@ label a {
     font-size: 1.3em;
   }
   .medidas-desktop p {
+    font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
     margin: 20px 0;
   }
   .slide-1 {
@@ -1895,23 +1901,35 @@ label a {
 @media screen and (min-width: 1150px) {
   /* Background Img adjustments */
   .home {
-    background-size: 60%;
+    background-size: 50%;
     border-bottom: none;
+  }
+
+  .about-content-wrapper {
+    padding-bottom: 45px;
   }
 }
 
 @media screen and (min-width: 1320px) {
   /* Background Img adjustments */
   .home {
-    background-size: 50%;
+    background-size: 40%;
     border-bottom: none;
+  }
+
+  .about-content-wrapper {
+    padding-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1590px) {
   /* Background Img adjustments */
   .home {
-    background-size: 40%;
+    background-size: 35%;
     border-bottom: none;
+  }
+
+  .about-content-wrapper {
+    padding-bottom: 100px;
   }
 }

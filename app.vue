@@ -69,7 +69,7 @@ onMounted(() => {
               <a class="header_nav" href="#materiales">Materiales</a>
             </li>
             <li>
-              <a class="header_nav" href="#subastas">Subastas</a>
+              <a class="header_nav" href="#subastas">Ofertas</a>
             </li>
             <li>
               <a class="header_nav" href="#contact">Contacto</a>
@@ -199,6 +199,14 @@ onMounted(() => {
                   diferentes tipos de fluidos como agua, aceite, combustible,
                   petróleo, entre otros.
                 </p>
+                <div class="medidas-container-desktop">
+                  <div class="medidas-desktop">
+                    <p><strong>Con medidas desde:</strong></p>
+                    <ul>
+                      <li>2" hasta 30"</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div class="slider-content-desktop slide-3">
                 <h3>BARRAS PERFORADAS</h3>
@@ -207,6 +215,14 @@ onMounted(() => {
                   resistencia que gracias a su capacidad de ser soldada, se
                   utiiliza en mecanizados.
                 </p>
+                <div class="medidas-container-desktop">
+                  <div class="medidas-desktop">
+                    <p><strong>Con medidas desde:</strong></p>
+                    <ul>
+                      <li>3" hasta 24"</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div class="slider-content-desktop slide-4">
                 <h3>EJES</h3>
@@ -215,6 +231,14 @@ onMounted(() => {
                   usos generales, contiene acero bajo en carbono, esta puede
                   aportar una excelente conformabilidad y soldadibilidad.
                 </p>
+                <div class="medidas-container-desktop">
+                  <div class="medidas-desktop">
+                    <p><strong>Con medidas desde:</strong></p>
+                    <ul>
+                      <li>2" hasta 23"</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="mat-img-desktop">
@@ -403,7 +427,7 @@ onMounted(() => {
         <div class="subastas-content">
           <div class="subastas_title header-moves">
             <div>
-              <h2>SUBASTAS</h2>
+              <h2>OFERTAS</h2>
               <p>
                 En esta sección puedes crear subastas para todos los productos
                 que encuentras a continuación.
@@ -423,7 +447,7 @@ onMounted(() => {
                     class="subastas-button"
                     @click="() => handleSubastaItemSelected(item)"
                   >
-                    <a>Realizar Oferta</a>
+                    <a>Escríbenos</a>
                   </button>
                 </div>
                 <img
