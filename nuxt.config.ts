@@ -1,9 +1,10 @@
 import { defineNuxtConfig } from "nuxt";
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   css: ["@/assets/css/normalize.css", "@/assets/css/main.css"],
   publicRuntimeConfig: {
-    sendGridApiKey: process.env.SENDGRID_API_KEY,
+    gomailerApiKey: process.env.GOMAILER_API_KEY,
+    gomailerBaseURL: process.env.GOMAILER_BASE_URL,
   },
+  buildModules: ["@pinia/nuxt"],
 });

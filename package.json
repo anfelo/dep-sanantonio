@@ -10,6 +10,7 @@
     "nuxt": "3.0.0-rc.3"
   },
   "dependencies": {
-    "@sendgrid/mail": "^6.4.0"
+    "@pinia/nuxt": "^0.4.0",
+    "pinia": "^2.0.18"
   }
 }
