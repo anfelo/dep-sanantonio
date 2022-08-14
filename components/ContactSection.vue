@@ -9,14 +9,52 @@ const { addVisitedSection } = appStore;
 
 const { sendEmail } = useApi();
 
-const contactForm = {
+let contactForm = {
   email: "",
   name: "",
   message: "",
 };
+let emailInvalid = ref(false);
+let nameInvalid = ref(false);
+let messageInvalid = ref(false);
+
+const isValidForm = (): boolean => {
+  let isValid = true;
+  if (!contactForm.email.trim()) {
+    emailInvalid.value = true;
+    isValid = false;
+  }
+
+  if (!contactForm.name.trim()) {
+    nameInvalid.value = true;
+    isValid = false;
+  }
+
+  if (!contactForm.message.trim()) {
+    messageInvalid.value = true;
+    isValid = false;
+  }
+
+  return isValid;
+};
 
 const handleSendEmail = async () => {
-  await sendEmail({ ...contactForm });
+  if (isValidForm()) {
+    await sendEmail({ ...contactForm });
+    resetForm();
+  }
+};
+
+const resetForm = () => {
+  nameInvalid.value = false;
+  emailInvalid.value = false;
+  messageInvalid.value = false;
+
+  contactForm = {
+    email: "",
+    name: "",
+    message: "",
+  };
 };
 
 const handleContactFormChange = (prop: string, value: string) => {
@@ -51,28 +89,37 @@ const handleContactFormChange = (prop: string, value: string) => {
         <div class="contact-content-wrapper">
           <div class="contact-content_info2">
             <form class="contact_form">
-              <label for="empresa">Empresa</label>
+              <label for="empresa" :class="{ invalid: nameInvalid }"
+                >Empresa</label
+              >
               <input
                 type="text"
                 id="empresa"
                 name="user_empresa"
+                :class="{ invalid: nameInvalid }"
                 @input="
                   (e: any) => handleContactFormChange('name', e.target.value)
                 "
               />
-              <label for="email">Correo</label>
+              <label for="email" :class="{ invalid: emailInvalid }"
+                >Correo</label
+              >
               <input
                 type="email"
                 id="email"
                 name="user_email"
+                :class="{ invalid: emailInvalid }"
                 @input="
                   (e: any) => handleContactFormChange('email', e.target.value)
                 "
               />
-              <label for="asunto">Asunto</label>
+              <label for="asunto" :class="{ invalid: messageInvalid }"
+                >Asunto</label
+              >
               <textarea
                 id="asunto"
                 name="user_asunto"
+                :class="{ invalid: messageInvalid }"
                 @input="
                   (e: any) => handleContactFormChange('message', e.target.value)
                 "

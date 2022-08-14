@@ -103,6 +103,16 @@ main {
   background-color: rgb(31, 31, 32);
 }
 
+input[type="text"].invalid,
+input[type="email"].invalid,
+textarea.invalid {
+  border: 1px solid tomato;
+}
+
+label.invalid {
+  color: tomato;
+}
+
 /* Header ------------------------------------------------------------- */
 .main-header {
   font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
@@ -581,8 +591,17 @@ label a {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(89, 89, 89, 0.6);
   z-index: 999;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(89, 89, 89, 0.6);
+  z-index: -1;
 }
 
 .modal-close {
@@ -648,6 +667,10 @@ label a {
   color: black;
   font-size: 1.1em;
   font-weight: 600;
+}
+
+.subastas-form label.invalid {
+  color: tomato;
 }
 
 .subastas-form input {
@@ -819,6 +842,14 @@ label a {
   color: #606060;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin-bottom: 30px;
+}
+
+.contact_form textarea.invalid {
+  border: 1px solid tomato;
+}
+
+.contact_form label.invalid {
+  color: tomato;
 }
 
 .contact_form button {
