@@ -2,29 +2,31 @@ export const useApi = () => {
   const config = useRuntimeConfig();
 
   const sendEmail = async (emailForm: {
-    from: string;
-    fromName?: string;
-    message: string;
-    subject: string;
+    email: string;
+    name?: string;
+    message?: string;
+    subject?: string;
   }): Promise<{ status: number; body?: any }> => {
     try {
-      const res = await $fetch(`${config.gomailerBaseURL}/api/v1/sendmail`, {
-        method: "post",
-        headers: {
-          "Api-Key": config.gomailerApiKey,
-          "Content-Type": "application/json",
-        },
+      await $fetch(`${config.gomailerBaseURL}/api/v1/sendmail`, {
+        method: "POST",
+        headers: { "Api-Key": config.gomailerApiKey },
         body: {
-          from: emailForm.from,
-          fromName: emailForm.fromName,
-          to: "af.osorio1341@gmail.com",
-          toName: "Anfelo",
-          subject: emailForm.subject,
-          plainTextContent: "This is a test",
-          htmlContent: "<h1>This is a test</h1>",
+          from: config.fromSenderEmail,
+          to: config.toContactEmail,
+          subject: emailForm.subject
+            ? emailForm.subject
+            : `Nueve solicitud de: ${emailForm.name}`,
+          plainTextContent: `
+            Solicitud de ${emailForm.name} - ${emailForm.email}:
+            ${emailForm.message}
+          `,
+          htmlContent: `
+            Solicitud de <b>${emailForm.name}</b> - ${emailForm.email}:
+            <p>${emailForm.message}</p>
+          `,
         },
       });
-      console.log(res);
       return { status: 200 };
     } catch (error) {
       console.log(error);

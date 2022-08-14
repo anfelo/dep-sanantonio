@@ -10,13 +10,13 @@ const { addVisitedSection } = appStore;
 const { sendEmail } = useApi();
 
 const contactForm = {
-  from: "",
-  fromName: "",
+  email: "",
+  name: "",
   message: "",
 };
 
 const handleSendEmail = async () => {
-  await sendEmail({ ...contactForm, subject: "Contacto" });
+  await sendEmail({ ...contactForm });
 };
 
 const handleContactFormChange = (prop: string, value: string) => {
@@ -57,7 +57,7 @@ const handleContactFormChange = (prop: string, value: string) => {
                 id="empresa"
                 name="user_empresa"
                 @input="
-                  (e: any) => handleContactFormChange('fromName', e.target.value)
+                  (e: any) => handleContactFormChange('name', e.target.value)
                 "
               />
               <label for="email">Correo</label>
@@ -66,7 +66,7 @@ const handleContactFormChange = (prop: string, value: string) => {
                 id="email"
                 name="user_email"
                 @input="
-                  (e: any) => handleContactFormChange('from', e.target.value)
+                  (e: any) => handleContactFormChange('email', e.target.value)
                 "
               />
               <label for="asunto">Asunto</label>
